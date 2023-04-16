@@ -17,7 +17,8 @@ public class App {
             System.out.println("1- De euros a Dólares");
             System.out.println("2- De euros a Libras");
             System.out.println("3- De euros a Yenes");
-            System.out.println("4- De euros a Todas las monedas");
+            System.out.println("4- De euros a Pesos Mexicanos");
+            System.out.println("5- De euros a Todas las monedas");
         System.out.println();
 
              System.out.println( "Introduce el Ejercicio al que quieres ir");
@@ -27,13 +28,11 @@ public class App {
 
         switch (numero){
 
-
         case 1:
             
         System.out.println("Tus Euros en dólares son: ");
         System.out.println(App.convertirMonedas(b)[0]);
         break;
-
 
         case 2:
 
@@ -41,18 +40,21 @@ public class App {
         System.out.println(App.convertirMonedas(b)[1]);
         break;
 
-
-    case 3:
+        case 3:
         System.out.println("Tus Euros en Yenes son: ");
         System.out.println(App.convertirMonedas(b)[2]);
         break;
 
-    case 4:
-        System.out.println("Los euros convertidos son: " + App.convertirMonedas(b)[0] + " Dólares," + " "+ App.convertirMonedas(b)[1] + " Libras" + " " + App.convertirMonedas(b)[2] + " Yenes" );
+        case 4:
+        System.out.println("Tus Euros en Pesos Mexicanos son: ");
+        System.out.println(App.convertirMonedas(b)[3]);
         break;
 
+        case 5:
+        System.out.println("Los euros convertidos son: " + App.convertirMonedas(b)[0] + " Dólares," + " "+ App.convertirMonedas(b)[1] + " Libras," + " " + App.convertirMonedas(b)[2] + " Yenes," + " " + App.convertirMonedas(b)[3] + " Pesos Mexicanos");
+        break;
 
-    default:
+        default:
         System.out.println("Ese caso no existe, introduce uno de los indicados");
 
         } 
@@ -68,10 +70,11 @@ public class App {
     salida.close();
     
     }public static double[] convertirMonedas(double x){
-        double[] resultado=new double[3];
-        resultado[0]=(x*0.98);
-        resultado[1]=(x*0.87);
-        resultado[2]=(x*144.73);
+        double[] resultado=new double[4];
+        resultado[0]=(x*1.10);
+        resultado[1]=(x*0.86);
+        resultado[2]=(x*125.98);
+        resultado[3]=(x*22.20);
         return resultado;
         }
    
