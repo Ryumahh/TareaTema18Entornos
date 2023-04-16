@@ -42,13 +42,10 @@ public class App {
         break;
 
 
-    case 3:
-        System.out.println("Tus Euros en Yenes son: ");
-        System.out.println(App.convertirMonedas(b)[2]);
-        break;
+    
 
     case 4:
-        System.out.println("Los euros convertidos son: " + App.convertirMonedas(b)[0] + " Dólares," + " "+ App.convertirMonedas(b)[1] + " Libras" + " " + App.convertirMonedas(b)[2] + " Yenes" );
+        System.out.println("Los euros convertidos son: " + App.convertirMonedas(b)[0] + " Dólares," + " "+ App.convertirMonedas(b)[1] + " Libras" + " ");
         break;
 
 
